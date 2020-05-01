@@ -314,7 +314,8 @@ namespace Beregovoi
         {
             //подсказка: для определения остатка от деления используется оператор %
             int[,] arr = new int [10,10]; 
-            int ostatok = 4 % 2; //будет равен нулю
+
+           
             int ch = 0;
             Random rnd = new Random();
 
