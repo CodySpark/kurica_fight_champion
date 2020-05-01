@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Buffers;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http.Headers;
 
@@ -110,6 +111,19 @@ namespace Beregovoi
                 { 7, 81, 90 } 
             };
 
+            int[] arr =  new int [m.Length];
+            int k = 0;
+
+            for (int i = 0; i < m.GetLength(0); i++)
+            {
+                for (int j = 0; j < m.GetLength(1); j++) 
+                {
+                    arr[k] = m[i, j];
+                    k++;
+                    
+                }
+                Console.WriteLine(" ");
+            }
         }
 
         /// <summary>
