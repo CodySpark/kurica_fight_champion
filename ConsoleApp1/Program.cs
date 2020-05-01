@@ -56,9 +56,9 @@ namespace Beregovoi
 
             //Task10();
 
-            Task11();
+            //Task11();
 
-            //Task12();
+            Task12();
 
             #endregion
 
@@ -313,10 +313,27 @@ namespace Beregovoi
         public static void Task12()
         {
             //подсказка: для определения остатка от деления используется оператор %
-            int[,] arr = { }; 
-            //int ostatok = 4 % 2; //будет равен нулю
+            int[,] arr = new int [10,10]; 
+            int ostatok = 4 % 2; //будет равен нулю
+            int ch = 0;
             Random rnd = new Random();
 
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    int r = rnd.Next(1,99);
+
+                    arr[i, j] = r;
+                    Console.Write(arr[i,j] + " ");
+                    if (arr[i,j] % 2 == 0)
+                    {
+                        ch++;
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Кол-во чётных чисел " + ch);
             
         }
     }
